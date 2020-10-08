@@ -1,0 +1,54 @@
+<div class="container text-left">  
+  <div class="row align-right">    
+    <div class="search-provider">
+      <h3>{{title}}</h3>  
+      <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#61442;  Search Provider  | Near City, Sate or Zipcode">
+    </div>
+</div>
+
+
+<div class="centered-content">
+  <div class="task-manager-container">
+    
+    <div class="sidebar">
+      <h3 class="title has-text-primary">
+        Refine your Search
+      </h3>
+
+      <div class="list-menu">
+        <a class="list-menu-items">
+          <p>List#1</p>
+        </a>
+        <a class="list-menu-items">
+          <p>List#1</p>
+        </a>
+        <a class="list-menu-items">
+          <p>List#1</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="task-list-container">
+      <div class="container">  
+        <table class="table table-striped">
+          <thead>
+            <tr>              
+              <th>Provider Name</th>
+              <th>Provider Details</th>
+              <th>Distance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let hero of heroes | filter:searchText">              
+              <td>{{hero.name}}</td>
+              <td>{{hero.country}}</td>
+              <th>{{hero.distance}}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div>  
+</div>
